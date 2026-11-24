@@ -1,0 +1,31 @@
+{
+  "model": "sonnet",
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git pull *)",
+      "Bash(git push)",
+      "Bash(git push origin main)",
+      "Bash(git config user.name *)",
+      "Bash(git config user.email *)",
+      "Bash(chmod 600 .deploy-key)",
+      "Bash(git config core.sshCommand *)"
+    ],
+    "deny": [
+      "Read(./.env.local)",
+      "Read(./.deploy-key)",
+      "Bash(git push --force *)",
+      "Bash(git push -f *)",
+      "Bash(git reset --hard *)",
+      "Bash(git clean *)",
+      "Bash(git branch -D *)"
+    ]
+  }
+}
